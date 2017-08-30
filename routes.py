@@ -1,14 +1,16 @@
-from flask import Blueprint, request, Response, stream_with_context
+from flask import Blueprint, request, Response
 import words
 
 api = Blueprint('textGenerator', __name__)
 
+
 @api.route("/", methods=['POST'])
 def generate():
-  # print(words.generateText())
-  result = words.generateText()
-  return ' '.join(result)
+    result = words.generateText()
+    print(' '.join(result))
+    return ' '.join(result)
+
 
 @api.route("/", methods=['GET'])
 def hello():
-  return "Hello World!"
+    return "Hello World!"

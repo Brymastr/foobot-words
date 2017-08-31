@@ -2,6 +2,7 @@ from flask import Flask
 import socket
 import os
 from routes import api
+
 app = Flask(__name__)
 
 app.config.update(

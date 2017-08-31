@@ -7,7 +7,6 @@ api = Blueprint('textGenerator', __name__)
 @api.route("/", methods=['POST'])
 def generate():
     result = words.generateText()
-    print(' '.join(result))
     return ' '.join(result)
 
 
